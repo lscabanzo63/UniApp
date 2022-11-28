@@ -14,7 +14,7 @@ public class AspiranteDto implements Serializable{
     
     private String userName ;
     private String password;
-    private String nombres;
+    private  String nombres;
     private String apellidos;
     private String correo;
     private int numeroCelular;
