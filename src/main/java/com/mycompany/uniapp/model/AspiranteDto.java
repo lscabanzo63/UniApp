@@ -10,5 +10,6 @@ package com.mycompany.uniapp.model;
  */
 public class AspiranteDto {
     int hola;
+   
 
 }
