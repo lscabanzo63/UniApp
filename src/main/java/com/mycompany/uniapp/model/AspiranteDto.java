@@ -12,38 +12,82 @@ import java.util.Objects;
  * @author santi
  */
 public class AspiranteDto implements Serializable {
+
     
-   private String usuario;
-   private String password;
+        private String userName ;
+    private String password;
+    private  String nombres;
+    private String apellidos;
+    private String correo;
+    private int numeroCelular;
 
-    /**
-     * @return the usuario
-     */
-    public String getUsuario() {
-        return usuario;
+    public AspiranteDto(String userName, String password, String nombres, String apellidos, String correo, int numeroCelular) {
+        this.userName = userName;
+        this.password = password;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.numeroCelular = numeroCelular;
+    }
+    
+    
+    
+    public String getUserName() {
+        return userName;
     }
 
-    /**
-     * @param usuario the usuario to set
-     */
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    /**
-     * @return the password
-     */
     public String getPassword() {
         return password;
     }
 
-    /**
-     * @param password the password to set
-     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public int getNumeroCelular() {
+        return numeroCelular;
+    }
+
+    public void setNumeroCelular(int numeroCelular) {
+        this.numeroCelular = numeroCelular;
+    }
+    
+
+
+    
+    
+    
+    
+    
     
     
     @Override
@@ -64,9 +108,9 @@ public class AspiranteDto implements Serializable {
             return false;
         }
         final AspiranteDto other = (AspiranteDto) obj;
-        if (!Objects.equals(this.usuario, other.usuario)) {
+        if (!Objects.equals(this.userName, other.userName)) {
             return false;
         }
-        return Objects.equals(this.password, other.password);
+        return Objects.equals(this.getPassword(), other.getPassword());
     }
 }
