@@ -9,5 +9,7 @@ package com.mycompany.uniapp.model;
  * @author santi
  */
 public class AspiranteDto {
-    
+    int hola;
+   
+
 }
