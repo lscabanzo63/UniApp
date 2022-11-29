@@ -28,6 +28,14 @@ public class VistaUniApp extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         lblUniapp = new javax.swing.JLabel();
+        btnRegistrar = new javax.swing.JButton();
+        btnTraerNum = new javax.swing.JButton();
+        btnTraerTodo = new javax.swing.JButton();
+        btnIniSesion = new javax.swing.JButton();
+        txtNumero = new javax.swing.JTextField();
+        txtNombre1 = new javax.swing.JTextField();
+        txtApellido1 = new javax.swing.JTextField();
+        txtCorreo1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,27 +47,89 @@ public class VistaUniApp extends javax.swing.JFrame {
         lblUniapp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUniapp.setText("UniApp");
 
+        btnRegistrar.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
+        btnRegistrar.setText("Registrar");
+
+        btnTraerNum.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
+        btnTraerNum.setText("Traer por numero:");
+        btnTraerNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTraerNumActionPerformed(evt);
+            }
+        });
+
+        btnTraerTodo.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
+        btnTraerTodo.setText("Traer todo: ");
+
+        btnIniSesion.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
+        btnIniSesion.setText("Iniciar Sesion");
+        btnIniSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniSesionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblUniapp, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(284, 284, 284))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(371, 371, 371)
-                .addComponent(lblUniapp, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(396, Short.MAX_VALUE))
+                .addGap(231, 231, 231)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCorreo1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnTraerNum, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(btnTraerTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnIniSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
                 .addComponent(lblUniapp, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(604, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtCorreo1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnTraerNum, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTraerTodo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnIniSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTraerNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTraerNumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTraerNumActionPerformed
+
+    private void btnIniSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniSesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIniSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,7 +167,15 @@ public class VistaUniApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIniSesion;
+    private javax.swing.JButton btnRegistrar;
+    private javax.swing.JButton btnTraerNum;
+    private javax.swing.JButton btnTraerTodo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblUniapp;
+    private javax.swing.JTextField txtApellido1;
+    private javax.swing.JTextField txtCorreo1;
+    private javax.swing.JTextField txtNombre1;
+    private javax.swing.JTextField txtNumero;
     // End of variables declaration//GEN-END:variables
 }
