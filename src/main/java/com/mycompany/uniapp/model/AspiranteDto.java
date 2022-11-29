@@ -14,7 +14,7 @@ import java.util.Objects;
 public class AspiranteDto implements Serializable {
 
     
-        private String userName ;
+    private String userName ;
     private String password;
     private  String nombres;
     private String apellidos;
